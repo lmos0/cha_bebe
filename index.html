@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.countdown {
+    font-size: 5rem;
+    animation: countdown 1s steps(1, end) infinite;
+}
+
+@keyframes countdown {
+    0% { content: '5'; }
+    20% { content: '4'; }
+    40% { content: '3'; }
+    60% { content: '2'; }
+    80% { content: '1'; }
+    100% { content: '0'; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="countdown" id="countdown">5</div>
+</body>
+
+<script>
+    let countdownElement = document.getElementById('countdown');
+let count = 5;
+
+function updateCountdown() {
+    if (count >= 0) {
+        countdownElement.textContent = count;
+        count--;
+    } else {
+        clearInterval(countdownInterval);
+        window.location.href = 'https://www.amazon.com.br/baby-reg/lusmrcio-deoliveirasantos-julho-2024-uberlndia/2Y8DJA43L5CO'
+    }
+}
+
+let countdownInterval = setInterval(updateCountdown, 1000);
+
+</script>
+</html>
